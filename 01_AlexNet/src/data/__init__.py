@@ -29,7 +29,7 @@ class Data:
         return augmented_imgs
 
     def get_test_img_and_label(self):
-        img = cv2.imread('D:/practice/tensorflow/01_AlexNet/resource/test.bmp')
+        img = cv2.imread('../../resource/test.bmp')
         (h, w, c) = img.shape
         label = np.zeros(1000)
         label[534] = 1  # dummy a label

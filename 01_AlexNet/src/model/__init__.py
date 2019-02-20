@@ -97,4 +97,4 @@ class Model:
             for epoch in range(num_epochs):
                 _, train_loss = sess.run([optimizer, cost], feed_dict={self.X_holder: X_train, self.Y_holder: Y_train})
                 print('epoch %i cost: %f' % (epoch, train_loss))
-            saver.save(sess, 'D:/practice/tensorflow/01_AlexNet/model/classification.ckpt')
+            saver.save(sess, '../../model/classification.ckpt')

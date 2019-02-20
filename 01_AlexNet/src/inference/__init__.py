@@ -28,8 +28,8 @@ config = tf.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.6
 with tf.Session(config=config) as sess:
     # First let's load meta graph and restore weights
-    saver = tf.train.import_meta_graph('D:/practice/tensorflow/01_AlexNet/model/classification.ckpt.meta')
-    saver.restore(sess, tf.train.latest_checkpoint('D:/practice/tensorflow/01_AlexNet/model/'))
+    saver = tf.train.import_meta_graph('../../model/classification.ckpt.meta')
+    saver.restore(sess, tf.train.latest_checkpoint('../../model/'))
     # for variable in tf.all_variables():
     #     print(variable)
     #     print(variable.name)
@@ -46,4 +46,4 @@ with tf.Session(config=config) as sess:
 
     feed_dict = {inputX: test_img, groundTruth: label}
     result = sess.run(tf.argmax(input=prediction, axis=-1), feed_dict)
-    print("the inference result is classified as label: %d" % result)
+    print(result)
