@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 
 h = 227
 w = 227
@@ -13,7 +14,7 @@ class Model:
         tf.set_random_seed(1)   # to keep results consistent (tensorflow seed)
         self.X_holder = tf.placeholder(dtype=tf.float32, shape=[None, height, width, channel], name='inputX')
         self.Y_holder = tf.placeholder(dtype=tf.float32, shape=[None, num_labels], name='groundTruth')
-        self.Training = tf.placeholder(dtype=tf.bool, shape=[1], name='training')
+        self.Training = tf.placeholder(dtype=tf.bool, name='training')
 
     def forward_propagation(self):
         filter1 = tf.get_variable(name='filter1', shape=[11, 11, 3, 96],
@@ -74,7 +75,7 @@ class Model:
         fc6 = tf.contrib.layers.fully_connected(inputs=flattened, num_outputs=4096, activation_fn=tf.nn.relu)
         fc6 = tf.layers.dropout(inputs=fc6, rate=0.5, seed=1, training=self.Training, name='dropout_fc6')
         fc7 = tf.contrib.layers.fully_connected(inputs=fc6, num_outputs=4096, activation_fn=tf.nn.relu)
-        fc7 = tf.layers.dropout(input=fc7, rate=0.5, seed=2, training=self.Training, name='dropout_fc7')
+        fc7 = tf.layers.dropout(inputs=fc7, rate=0.5, seed=2, training=self.Training, name='dropout_fc7')
         fc8 = tf.contrib.layers.fully_connected(inputs=fc7, num_outputs=1000, activation_fn=None)
 
         return fc8
