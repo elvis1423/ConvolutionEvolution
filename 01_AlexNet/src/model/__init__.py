@@ -10,8 +10,10 @@ class Model:
     def __init__(self, height, width, channel, num_labels):
         print('This is the __init__ of class Model')
         tf.reset_default_graph()
+        tf.set_random_seed(1)   # to keep results consistent (tensorflow seed)
         self.X_holder = tf.placeholder(dtype=tf.float32, shape=[None, height, width, channel], name='inputX')
         self.Y_holder = tf.placeholder(dtype=tf.float32, shape=[None, num_labels], name='groundTruth')
+        self.Training = tf.placeholder(dtype=tf.bool, shape=[1], name='training')
 
     def forward_propagation(self):
         filter1 = tf.get_variable(name='filter1', shape=[11, 11, 3, 96],
@@ -70,7 +72,9 @@ class Model:
         flattened = tf.contrib.layers.flatten(Activation5_1)
 
         fc6 = tf.contrib.layers.fully_connected(inputs=flattened, num_outputs=4096, activation_fn=tf.nn.relu)
+        fc6 = tf.layers.dropout(inputs=fc6, rate=0.5, seed=1, training=self.Training, name='dropout_fc6')
         fc7 = tf.contrib.layers.fully_connected(inputs=fc6, num_outputs=4096, activation_fn=tf.nn.relu)
+        fc7 = tf.layers.dropout(input=fc7, rate=0.5, seed=2, training=self.Training, name='dropout_fc7')
         fc8 = tf.contrib.layers.fully_connected(inputs=fc7, num_outputs=1000, activation_fn=None)
 
         return fc8
@@ -80,7 +84,7 @@ class Model:
         reduce_mean = tf.reduce_mean(cross_entropy)
         return reduce_mean
 
-    def train(self, X_train, Y_train, learning_rate=0.002, num_epochs=10):
+    def train(self, X_train, Y_train, learning_rate=0.002, num_epochs=10, training=True):
 
         Y_logits = self.forward_propagation()  # y_hat shape=(?, 1000)
         prediction = tf.nn.softmax(logits=Y_logits, name='prediction')
@@ -95,6 +99,7 @@ class Model:
         with tf.Session(config=config) as sess:
             sess.run(init)
             for epoch in range(num_epochs):
-                _, train_loss = sess.run([optimizer, cost], feed_dict={self.X_holder: X_train, self.Y_holder: Y_train})
+                _, train_loss = sess.run([optimizer, cost], feed_dict={self.X_holder: X_train,
+                                                                       self.Y_holder: Y_train, self.Training: training})
                 print('epoch %i cost: %f' % (epoch, train_loss))
             saver.save(sess, '../../model/classification.ckpt')
