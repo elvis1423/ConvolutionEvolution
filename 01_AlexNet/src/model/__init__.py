@@ -1,5 +1,4 @@
 import tensorflow as tf
-import numpy as np
 
 h = 227
 w = 227
@@ -84,23 +83,3 @@ class Model:
         cross_entropy = tf.nn.softmax_cross_entropy_with_logits(labels=self.Y_holder, logits=Y_logits)
         reduce_mean = tf.reduce_mean(cross_entropy)
         return reduce_mean
-
-    def train(self, X_train, Y_train, learning_rate=0.002, num_epochs=10, training=True):
-
-        Y_logits = self.forward_propagation()  # y_hat shape=(?, 1000)
-        prediction = tf.nn.softmax(logits=Y_logits, name='prediction')
-        cost = self.cost(Y_logits)
-        optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss=cost)
-
-        init = tf.global_variables_initializer()
-        config = tf.ConfigProto()
-        config.gpu_options.per_process_gpu_memory_fraction = 0.5
-        saver = tf.train.Saver()
-
-        with tf.Session(config=config) as sess:
-            sess.run(init)
-            for epoch in range(num_epochs):
-                _, train_loss = sess.run([optimizer, cost], feed_dict={self.X_holder: X_train,
-                                                                       self.Y_holder: Y_train, self.Training: training})
-                print('epoch %i cost: %f' % (epoch, train_loss))
-            saver.save(sess, '../../model/classification.ckpt')
