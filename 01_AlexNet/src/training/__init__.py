@@ -13,6 +13,7 @@ num_epochs = 10
 
 def train(Model, X_train, Y_train, learning_rate=0.002, num_epochs=10, training=True):
     Y_logits = Model.forward_propagation()  # y_hat shape=(?, 1000)
+    prediction = tf.nn.softmax(logits=Y_logits, name='prediction')  # Used for retrieving by name when inference
     cost = Model.cost(Y_logits)
     optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss=cost)
 
