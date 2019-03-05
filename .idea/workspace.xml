@@ -2,7 +2,235 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08b9b4b0-1e18-4ade-9e45-7edf26dfd3df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn3_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn3_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn3_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/bn3_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/conv3_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/conv3_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/dense_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/dense_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_1x1_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_1x1_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_1x1_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_1x1_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_1x1_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_1x1_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_3x3_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_5x5_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_pool_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_pool_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_pool_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_pool_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_pool_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3a_pool_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_1x1_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_1x1_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_1x1_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_1x1_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_1x1_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_1x1_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_3x3_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_5x5_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_pool_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_pool_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_pool_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_pool_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_pool_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3b_pool_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_3x3_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_3c_5x5_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_1x1_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_1x1_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_1x1_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_1x1_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_1x1_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_1x1_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_3x3_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_5x5_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_pool_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_pool_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_pool_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_pool_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_pool_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4a_pool_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_4e_5x5_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_1x1_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_1x1_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_1x1_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_1x1_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_1x1_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_1x1_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_conv2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_conv2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_3x3_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_pool_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_pool_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_pool_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_pool_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_pool_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5a_pool_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_1x1_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_1x1_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_1x1_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_1x1_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_1x1_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_1x1_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_bn1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_bn1_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_bn1_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_bn1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_bn2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_bn2_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_bn2_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_bn2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_conv1_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_conv1_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_conv2_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_3x3_conv2_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_pool_bn_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_pool_bn_m.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_pool_bn_v.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_pool_bn_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_pool_conv_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/params/inception_5b_pool_conv_w.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/99_Doodle/src/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ConvolutionEvolution.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ConvolutionEvolution.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01_AlexNet/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/01_AlexNet/readme.md" afterDir="false" />
     </list>
@@ -17,50 +245,56 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="csv" value="2" />
           <entry key="png" value="1" />
-          <entry key="py" value="7" />
+          <entry key="py" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="Python" value="7" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="977" />
+          <entry key="py" value="5651" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="977" />
+          <entry key="Python" value="5651" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_AlexNet/src/model/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="73" column="109" lean-forward="true" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="109" />
+            <state relative-caret-position="1041">
+              <caret line="73" column="109" lean-forward="true" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="109" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01_AlexNet/src/data/__init__.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="647">
+              <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1551791407767" expanded="true" signature="11938:15258" ph="..." />
+                <marker date="1551791407767" expanded="true" signature="15272:15273" ph="..." />
+                <marker date="1551791407767" expanded="true" signature="15480:15485" ph="..." />
               </folding>
             </state>
           </provider>
@@ -69,8 +303,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_AlexNet/src/training/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+            <state relative-caret-position="147">
+              <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="11" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -78,11 +312,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/99_Doodle/src/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="231">
+              <caret line="17" column="74" lean-forward="true" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -93,11 +327,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="28" column="71" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="71" />
+            <state relative-caret-position="468">
+              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/numpy/lib/_datasource.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-839">
+              <caret line="615" selection-start-line="615" selection-end-line="615" />
             </state>
           </provider>
         </entry>
@@ -114,6 +357,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>prediction</find>
+      <find>tf.contrib.layers.xavier_initializer(seed=0)</find>
+      <find>shape</find>
+      <find>inception_3b_1x1_bn</find>
+      <find>inception_3b_concat</find>
+      <find>inception_5a</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,6 +374,7 @@
         <option value="$PROJECT_DIR$/01_AlexNet/src/model/__init__.py" />
         <option value="$PROJECT_DIR$/01_AlexNet/src/training/__init__.py" />
         <option value="$PROJECT_DIR$/99_Doodle/src/__init__.py" />
+        <option value="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" />
       </list>
     </option>
   </component>
@@ -167,6 +416,45 @@
               <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
               <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="inference" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="02_FaceNet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="02_FaceNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="02_FaceNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -188,6 +476,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\practice\ConvolutionEvolution\02_FaceNet\params" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -295,20 +588,20 @@
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11626667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16921455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45602605" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.48642778" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19761129" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42019543" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -335,6 +628,11 @@
           <line>14</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/99_Doodle/src/__init__.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -353,15 +651,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/data/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/framework/ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -376,42 +665,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/images/AlexNet-1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/data/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="56" selection-start-line="5" selection-start-column="4" selection-end-line="6" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_FaceNet/params/inception_4e_3x3_conv2_w.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/99_Doodle/inception_3a_5x5_bn1_v.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/numpy/lib/_datasource.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-839">
+          <caret line="615" selection-start-line="615" selection-end-line="615" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/ops/gen_nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/ops/variable_scope.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1435" column="4" selection-start-line="1435" selection-start-column="4" selection-end-line="1435" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="2094" column="4" selection-start-line="2094" selection-start-column="4" selection-end-line="2094" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/training/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="71" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="71" />
+        <state relative-caret-position="468">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01_AlexNet/images/AlexNet-1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/training/__init__.py">
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/model/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+        <state relative-caret-position="1041">
+          <caret line="73" column="109" lean-forward="true" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/99_Doodle/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="17" column="74" lean-forward="true" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/model/__init__.py">
+    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="73" column="109" lean-forward="true" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/99_Doodle/src/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="647">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1551791407767" expanded="true" signature="11938:15258" ph="..." />
+            <marker date="1551791407767" expanded="true" signature="15272:15273" ph="..." />
+            <marker date="1551791407767" expanded="true" signature="15480:15485" ph="..." />
           </folding>
         </state>
       </provider>
