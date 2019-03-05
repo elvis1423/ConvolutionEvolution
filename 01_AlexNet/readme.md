@@ -124,6 +124,8 @@ feed_dict = {inputX: test_img, groundTruth: label, training: False}
 result = sess.run(tf.argmax(input=prediction, axis=-1), feed_dict)
 ```
 
+## How to use other people's trained model?
+
 
 
 ## Reference
