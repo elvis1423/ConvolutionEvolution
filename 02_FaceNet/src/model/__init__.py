@@ -4,22 +4,21 @@ import tensorflow as tf
 def Conv2D(input=None, filter_shape=None, strides=None, padding='VALID', data_format='NHWC', name=None):
     conv_w = tf.get_variable(name=name + '_w', shape=filter_shape, initializer=tf.zeros_initializer())
     if data_format == 'NHWC':
-        conv_b = tf.get_variable(name=name + '_b', shape=[filter_shape.shape[-1]], initializer=tf.zeros_initializer())
+        conv_b = tf.get_variable(name=name + '_b', shape=[filter_shape[-1]], initializer=tf.zeros_initializer())
     else:
-        conv_b = tf.get_variable(name=name + '_b', shape=[filter_shape.shape[1]], initializer=tf.zeros_initializer())
+        conv_b = tf.get_variable(name=name + '_b', shape=[filter_shape[1]], initializer=tf.zeros_initializer())
     conv_generation = tf.nn.conv2d(input=input, filter=conv_w, strides=strides, padding=padding,
-                                   data_format=data_format, name=name + '_generation',
-                                   initializer=tf.zeros_initializer()) + conv_b
+                                   data_format=data_format, name=name + '_generation',) + conv_b
     return conv_generation
 
 
 def BatchNormalization(input=None, shape=None, name=None, epsilon=0.00001):
-    bn_beta = tf.get_variable(name=name+'_w', shape=shape, initializer=tf.zeros_initializer())  # beta of batch normalization
-    bn_gamma = tf.get_variable(name=name+'_b', shape=shape, initializer=tf.zeros_initializer())  # gamma of batch normalization
-    bn_mean = tf.get_variable(name=name+'_m', shape=shape, initializer=tf.zeros_initializer())  # moving mean of batch normalization
-    bn_variance = tf.get_variable(name=name+'_v', shape=shape, initializer=tf.zeros_initializer())  # moving variance of batch normalization
-    bn = tf.layers.batch_normalization(input=input, epsilon=epsilon, beta_initializer=bn_beta, gamma_initializer=bn_gamma,
-                                       moving_mean_initializer=bn_mean, moving_variance_initializer=bn_variance, name=name)
+    bn_beta = tf.get_variable(name=name+'_w', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # beta of batch normalization
+    bn_gamma = tf.get_variable(name=name+'_b', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # gamma of batch normalization
+    bn_mean = tf.get_variable(name=name+'_m', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # moving mean of batch normalization
+    bn_variance = tf.get_variable(name=name+'_v', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # moving variance of batch normalization
+    bn = tf.nn.batch_normalization(x=input, variance_epsilon=epsilon, mean=bn_mean, variance=bn_variance,
+                                   offset=bn_beta, scale=bn_gamma, name=name)
     return bn
 
 
@@ -219,8 +218,7 @@ class FaceNet:
         conv3_bn = BatchNormalization(input=conv3_generation, shape=[192], name='bn3')
         conv3_activation = tf.nn.relu(features=conv3_bn, name='conv3_bn_relu')
 
-        maxpool_conv3 = tf.nn.max_pool(value=conv3_activation, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding='SAME',
-                                       data_format='NHWC', name='maxpool_conv3')
+        maxpool_conv3 = tf.nn.max_pool(value=conv3_activation, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='maxpool_conv3')
 
         inception_1a = Inception_block_1a(maxpool_conv3)
         inception_1b = Inception_block_1b(inception_1a)
@@ -232,9 +230,8 @@ class FaceNet:
         inception_3a = Inception_block_3a(inception_2b)
         inception_3b = Inception_block_3b(inception_3a)
 
-        avgpool_inception = tf.nn.avg_pool(value=inception_3b, ksize=[1, 3, 3, 1], strides=[1, 1, 1, 1], padding='VALID',
-                                           data_format='NHWC', name='avgpool_inception')
+        avgpool_inception = tf.nn.avg_pool(value=inception_3b, ksize=[1, 3, 3, 1], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='avgpool_inception')
         flattened = tf.contrib.layers.flatten(avgpool_inception)
         fully_connected = tf.contrib.layers.fully_connected(inputs=flattened, num_outputs=128, activation_fn=None)
-        face_embedding = tf.nn.l2_normalize(X=fully_connected, axis=-1, name='l2_normal')
+        face_embedding = tf.nn.l2_normalize(x=fully_connected, axis=-1, name='l2_normal')
         return face_embedding
