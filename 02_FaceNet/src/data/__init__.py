@@ -83,7 +83,9 @@ class Data:
     def get_camera_face_for_test(self):
         test_face = cv2.imread('../../images/camera_0.jpg')
         (h, w, c) = test_face.shape
-        return np.reshape(test_face, [1, h, w, c])
+        img1 = np.around(test_face/255.0, decimals=12)
+        img = img1[...,::-1]
+        return np.reshape(img, [1, h, w, c])
 
     def load_weights(self):
         # Set weights path
