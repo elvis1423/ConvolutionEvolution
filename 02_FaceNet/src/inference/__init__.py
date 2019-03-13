@@ -48,4 +48,5 @@ init = tf.global_variables_initializer()
 with tf.Session() as sess:
     sess.run(init)
     result = sess.run(face_vector, feed_dict=feed_diction)
-    print(result)
+    print('shape of middle result is: ' + result.shape)
+    print(result[0, :, :, 0])

@@ -235,3 +235,36 @@ class FaceNet:
         fully_connected = tf.contrib.layers.fully_connected(inputs=flattened, num_outputs=128, activation_fn=None)
         face_embedding = tf.nn.l2_normalize(x=fully_connected, axis=-1, name='l2_normal')
         return face_embedding
+
+    def forward_debug(self):
+        conv1_generation = Conv2D(input=self.X, filter_shape=[7, 7, 3, 64], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='conv1')
+        conv1_bn = BatchNormalization(input=conv1_generation, shape=[64], name='bn1')
+        conv1_activation = tf.nn.relu(features=conv1_bn, name='conv1_bn_relu')
+
+        maxpool_conv1 = tf.nn.max_pool(value=conv1_activation, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='maxpool_conv1')
+
+        conv2_generation = Conv2D(input=maxpool_conv1, filter_shape=[1, 1, 64, 64], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='conv2')
+        conv2_bn = BatchNormalization(input=conv2_generation, shape=[64], name='bn2')
+        conv2_activation = tf.nn.relu(features=conv2_bn, name='conv2_bn_relu')
+
+        conv3_generation = Conv2D(input=conv2_activation, filter_shape=[3, 3, 64, 192], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='conv3')
+        conv3_bn = BatchNormalization(input=conv3_generation, shape=[192], name='bn3')
+        conv3_activation = tf.nn.relu(features=conv3_bn, name='conv3_bn_relu')
+
+        maxpool_conv3 = tf.nn.max_pool(value=conv3_activation, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='maxpool_conv3')
+        # check point 1
+        inception_1a = Inception_block_1a(maxpool_conv3)
+        inception_1b = Inception_block_1b(inception_1a)
+        inception_1c = Inception_block_1c(inception_1b)
+
+        inception_2a = Inception_block_2a(inception_1c)
+        inception_2b = Inception_block_2b(inception_2a)
+
+        inception_3a = Inception_block_3a(inception_2b)
+        inception_3b = Inception_block_3b(inception_3a)
+
+        avgpool_inception = tf.nn.avg_pool(value=inception_3b, ksize=[1, 3, 3, 1], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='avgpool_inception')
+        flattened = tf.contrib.layers.flatten(avgpool_inception)
+        fully_connected = tf.contrib.layers.fully_connected(inputs=flattened, num_outputs=128, activation_fn=None)
+        face_embedding = tf.nn.l2_normalize(x=fully_connected, axis=-1, name='l2_normal')
+        return maxpool_conv3
