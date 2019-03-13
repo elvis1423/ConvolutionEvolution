@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08b9b4b0-1e18-4ade-9e45-7edf26dfd3df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/02_FaceNet/src/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/src/data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="189">
+              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -87,15 +87,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="253" column="16" selection-start-line="253" selection-start-column="16" selection-end-line="253" selection-end-column="16" />
+            <state relative-caret-position="600">
+              <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
               <folding>
-                <marker date="1552459363702" expanded="true" signature="11861:15181" ph="..." />
-                <marker date="1552459363702" expanded="true" signature="15195:15196" ph="..." />
-                <marker date="1552459363702" expanded="true" signature="15403:15408" ph="..." />
+                <marker date="1552461204967" expanded="true" signature="11861:15181" ph="..." />
+                <marker date="1552461204967" expanded="true" signature="15195:15196" ph="..." />
+                <marker date="1552461204967" expanded="true" signature="15403:15408" ph="..." />
               </folding>
             </state>
           </provider>
@@ -113,10 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="-756">
               <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -159,6 +159,8 @@
       <find>cost</find>
       <find>WEIGHTS</find>
       <find>flatten</find>
+      <find>inception_4e_3x3_conv2</find>
+      <find>forward_debug</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,9 +173,9 @@
         <option value="$PROJECT_DIR$/01_AlexNet/src/model/__init__.py" />
         <option value="$PROJECT_DIR$/01_AlexNet/src/training/__init__.py" />
         <option value="$PROJECT_DIR$/99_Doodle/src/__init__.py" />
-        <option value="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" />
         <option value="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" />
         <option value="$PROJECT_DIR$/02_FaceNet/src/data/__init__.py" />
+        <option value="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" />
       </list>
     </option>
   </component>
@@ -411,13 +413,13 @@
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16921455" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16921455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.44299674" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.089033656" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.15743756" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -465,6 +467,11 @@
           <url>file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py</url>
           <line>46</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -650,35 +657,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
+    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="253" column="16" selection-start-line="253" selection-start-column="16" selection-end-line="253" selection-end-column="16" />
+        <state relative-caret-position="-756">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding>
-            <marker date="1552459363702" expanded="true" signature="11861:15181" ph="..." />
-            <marker date="1552459363702" expanded="true" signature="15195:15196" ph="..." />
-            <marker date="1552459363702" expanded="true" signature="15403:15408" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1552460762772" expanded="true" signature="3899:3900" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="189">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
+    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        <state relative-caret-position="600">
+          <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1552460762772" expanded="true" signature="3899:3900" ph="..." />
+            <marker date="1552461204967" expanded="true" signature="11861:15181" ph="..." />
+            <marker date="1552461204967" expanded="true" signature="15195:15196" ph="..." />
+            <marker date="1552461204967" expanded="true" signature="15403:15408" ph="..." />
           </folding>
         </state>
       </provider>
