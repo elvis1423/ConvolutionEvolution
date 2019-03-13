@@ -81,10 +81,10 @@ class Data:
         print('This is the __init__ func of class Data in FaceNet')
 
     def get_camera_face_for_test(self):
-        test_face = cv2.imread('../../images/camera_0.jpg')
+        test_face = cv2.imread('../../images/camera_0.jpg', 1)
         (h, w, c) = test_face.shape
         img1 = np.around(test_face/255.0, decimals=12)
-        img = img1[...,::-1]
+        img = img1[..., ::-1]
         return np.reshape(img, [1, h, w, c])
 
     def load_weights(self):
