@@ -235,4 +235,4 @@ class FaceNet:
         flattened = tf.contrib.layers.flatten(avgpool_inception)
         fully_connected = tf.contrib.layers.fully_connected(inputs=flattened, num_outputs=128, activation_fn=None)
         face_embedding = tf.nn.l2_normalize(x=fully_connected, axis=-1, name='l2_normal')
-        return conv1_generation
+        return face_embedding

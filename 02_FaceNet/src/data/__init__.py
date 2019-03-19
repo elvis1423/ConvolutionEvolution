@@ -4,32 +4,31 @@ import numpy as np
 from numpy import genfromtxt
 
 WEIGHTS = [
-        'conv1']
-    # 'bn1', 'conv2', 'bn2', 'conv3', 'bn3',
-    #     'inception_3a_1x1_conv', 'inception_3a_1x1_bn',
-    #     'inception_3a_pool_conv', 'inception_3a_pool_bn',
-    #     'inception_3a_5x5_conv1', 'inception_3a_5x5_conv2', 'inception_3a_5x5_bn1', 'inception_3a_5x5_bn2',
-    #     'inception_3a_3x3_conv1', 'inception_3a_3x3_conv2', 'inception_3a_3x3_bn1', 'inception_3a_3x3_bn2',
-    #     'inception_3b_3x3_conv1', 'inception_3b_3x3_conv2', 'inception_3b_3x3_bn1', 'inception_3b_3x3_bn2',
-    #     'inception_3b_5x5_conv1', 'inception_3b_5x5_conv2', 'inception_3b_5x5_bn1', 'inception_3b_5x5_bn2',
-    #     'inception_3b_pool_conv', 'inception_3b_pool_bn',
-    #     'inception_3b_1x1_conv', 'inception_3b_1x1_bn',
-    #     'inception_3c_3x3_conv1', 'inception_3c_3x3_conv2', 'inception_3c_3x3_bn1', 'inception_3c_3x3_bn2',
-    #     'inception_3c_5x5_conv1', 'inception_3c_5x5_conv2', 'inception_3c_5x5_bn1', 'inception_3c_5x5_bn2',
-    #     'inception_4a_3x3_conv1', 'inception_4a_3x3_conv2', 'inception_4a_3x3_bn1', 'inception_4a_3x3_bn2',
-    #     'inception_4a_5x5_conv1', 'inception_4a_5x5_conv2', 'inception_4a_5x5_bn1', 'inception_4a_5x5_bn2',
-    #     'inception_4a_pool_conv', 'inception_4a_pool_bn',
-    #     'inception_4a_1x1_conv', 'inception_4a_1x1_bn',
-    #     'inception_4e_3x3_conv1', 'inception_4e_3x3_conv2', 'inception_4e_3x3_bn1', 'inception_4e_3x3_bn2',
-    #     'inception_4e_5x5_conv1', 'inception_4e_5x5_conv2', 'inception_4e_5x5_bn1', 'inception_4e_5x5_bn2',
-    #     'inception_5a_3x3_conv1', 'inception_5a_3x3_conv2', 'inception_5a_3x3_bn1', 'inception_5a_3x3_bn2',
-    #     'inception_5a_pool_conv', 'inception_5a_pool_bn',
-    #     'inception_5a_1x1_conv', 'inception_5a_1x1_bn',
-    #     'inception_5b_3x3_conv1', 'inception_5b_3x3_conv2', 'inception_5b_3x3_bn1', 'inception_5b_3x3_bn2',
-    #     'inception_5b_pool_conv', 'inception_5b_pool_bn',
-    #     'inception_5b_1x1_conv', 'inception_5b_1x1_bn',
-    #     'dense_layer'
-    # ]
+        'conv1', 'bn1', 'conv2', 'bn2', 'conv3', 'bn3',
+        'inception_3a_1x1_conv', 'inception_3a_1x1_bn',
+        'inception_3a_pool_conv', 'inception_3a_pool_bn',
+        'inception_3a_5x5_conv1', 'inception_3a_5x5_conv2', 'inception_3a_5x5_bn1', 'inception_3a_5x5_bn2',
+        'inception_3a_3x3_conv1', 'inception_3a_3x3_conv2', 'inception_3a_3x3_bn1', 'inception_3a_3x3_bn2',
+        'inception_3b_3x3_conv1', 'inception_3b_3x3_conv2', 'inception_3b_3x3_bn1', 'inception_3b_3x3_bn2',
+        'inception_3b_5x5_conv1', 'inception_3b_5x5_conv2', 'inception_3b_5x5_bn1', 'inception_3b_5x5_bn2',
+        'inception_3b_pool_conv', 'inception_3b_pool_bn',
+        'inception_3b_1x1_conv', 'inception_3b_1x1_bn',
+        'inception_3c_3x3_conv1', 'inception_3c_3x3_conv2', 'inception_3c_3x3_bn1', 'inception_3c_3x3_bn2',
+        'inception_3c_5x5_conv1', 'inception_3c_5x5_conv2', 'inception_3c_5x5_bn1', 'inception_3c_5x5_bn2',
+        'inception_4a_3x3_conv1', 'inception_4a_3x3_conv2', 'inception_4a_3x3_bn1', 'inception_4a_3x3_bn2',
+        'inception_4a_5x5_conv1', 'inception_4a_5x5_conv2', 'inception_4a_5x5_bn1', 'inception_4a_5x5_bn2',
+        'inception_4a_pool_conv', 'inception_4a_pool_bn',
+        'inception_4a_1x1_conv', 'inception_4a_1x1_bn',
+        'inception_4e_3x3_conv1', 'inception_4e_3x3_conv2', 'inception_4e_3x3_bn1', 'inception_4e_3x3_bn2',
+        'inception_4e_5x5_conv1', 'inception_4e_5x5_conv2', 'inception_4e_5x5_bn1', 'inception_4e_5x5_bn2',
+        'inception_5a_3x3_conv1', 'inception_5a_3x3_conv2', 'inception_5a_3x3_bn1', 'inception_5a_3x3_bn2',
+        'inception_5a_pool_conv', 'inception_5a_pool_bn',
+        'inception_5a_1x1_conv', 'inception_5a_1x1_bn',
+        'inception_5b_3x3_conv1', 'inception_5b_3x3_conv2', 'inception_5b_3x3_bn1', 'inception_5b_3x3_bn2',
+        'inception_5b_pool_conv', 'inception_5b_pool_bn',
+        'inception_5b_1x1_conv', 'inception_5b_1x1_bn',
+        'dense_layer'
+    ]
 
 WEIGHTS_TEST = [
         'conv1', 'inception_3a_1x1_bn', 'inception_3a_1x1_conv', 'dense_layer'
@@ -82,6 +81,13 @@ class Data:
 
     def get_camera_face_for_test(self):
         test_face = cv2.imread('../../images/camera_0.jpg', 1)
+        (h, w, c) = test_face.shape
+        img1 = np.around(test_face/255.0, decimals=12)
+        img = img1[..., ::-1]
+        return np.reshape(img, [1, h, w, c])
+
+    def get_camera_face_by(self, file_path):
+        test_face = cv2.imread(file_path, 1)
         (h, w, c) = test_face.shape
         img1 = np.around(test_face/255.0, decimals=12)
         img = img1[..., ::-1]

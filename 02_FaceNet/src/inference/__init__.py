@@ -1,11 +1,16 @@
 import model
 import data
 import tensorflow as tf
+import numpy as np
 
 
 data = data.Data()
 weights_dict = data.load_weights()
 input_x = data.get_camera_face_for_test()
+younes = data.get_camera_face_by('../../images/younes.jpg')
+benoit = data.get_camera_face_by('../../images/camera_2.jpg')
+
+print(input_x[0,:,:,0])
 face_net = model.FaceNet()
 face_vector = face_net.forward()
 
@@ -23,6 +28,8 @@ for key, value in weights_dict.items():
         conv_b_tensor = graph.get_tensor_by_name(key + '_b:0')
         feed_diction[conv_w_tensor] = conv_w
         feed_diction[conv_b_tensor] = conv_b
+        print('conv_w shape' + str(conv_w.shape))
+        print('conv_b shape' + str(conv_b.shape))
     elif 'bn' in key:  # have bn_w, bn_b, bn_m, bn_v parameters
         bn_w = value[0]
         bn_b = value[1]
@@ -45,15 +52,20 @@ for key, value in weights_dict.items():
         feed_diction[fc_b_tensor] = fc_b
 
 init = tf.global_variables_initializer()
-with tf.Session() as sess:
+config = tf.ConfigProto()
+config.gpu_options.per_process_gpu_memory_fraction = 0.2
+with tf.Session(config=config) as sess:
     sess.run(init)
-    result = sess.run(face_vector, feed_dict=feed_diction)
-    print('shape of middle result is: ' + str(result.shape))
-    print(result[0, :, :, 0])
-    graph = tf.get_default_graph()
-    conv1_w = graph.get_tensor_by_name('conv1_w:0')
-    conv1_w_feeded = sess.run(conv1_w, feed_dict=feed_diction)
-    print(conv1_w.eval())
-    conv1_b = graph.get_tensor_by_name('conv1_b:0')
-    conv1_b_feeded = sess.run(conv1_b, feed_dict=feed_diction)
-    print(conv1_b.eval())
+    anchor = sess.run(face_vector, feed_dict=feed_diction)
+    feed_diction[InputX] = younes
+    positive = sess.run(face_vector, feed_dict=feed_diction)
+    feed_diction[InputX] = benoit
+    negative = sess.run(face_vector, feed_dict=feed_diction)
+
+    print(anchor)
+    print(positive)
+    print(negative)
+    print('distance between anchor and positive' + str(np.linalg.norm(anchor-positive)))
+    print('distance between anchor and negative' + str(np.linalg.norm(anchor-negative)))
+
+
