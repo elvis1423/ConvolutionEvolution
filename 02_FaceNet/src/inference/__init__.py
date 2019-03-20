@@ -167,16 +167,20 @@ with tf.Session(config=config) as sess:
     sess.run(init)
     anchor = sess.run(face_vector, feed_dict=feed_diction)
     # feed_diction[InputX] = younes
-    # positive = sess.run(face_vector, feed_dict=feed_diction)
+    positive = sess.run(face_vector, feed_dict=feed_diction)
     # feed_diction[InputX] = benoit
-    # negative = sess.run(face_vector, feed_dict=feed_diction)
+    negative = sess.run(face_vector, feed_dict=feed_diction)
 
     # for i in range(48):
     #     print(anchor[0, i, :, 0])
-    print(anchor[0,:,:,0])
-    # print(positive)
-    # print(negative)
-    # print('distance between anchor and positive' + str(np.linalg.norm(anchor-positive)))
-    # print('distance between anchor and negative' + str(np.linalg.norm(anchor-negative)))
+    # print(anchor[0,:,:,0])
+    print(anchor)
+    print('-------------------------------------------------')
+    print(positive)
+    print('-------------------------------------------------')
+    print(negative)
+    print('-------------------------------------------------')
+    print('distance between anchor and positive' + str(np.linalg.norm(anchor-positive)))
+    print('distance between anchor and negative' + str(np.linalg.norm(anchor-negative)))
 
 
