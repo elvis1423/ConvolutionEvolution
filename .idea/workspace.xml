@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08b9b4b0-1e18-4ade-9e45-7edf26dfd3df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/99_Doodle/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/99_Doodle/src/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="08b9b4b0-1e18-4ade-9e45-7edf26dfd3df" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="391">
+              <caret line="175" column="29" lean-forward="true" selection-start-line="175" selection-start-column="29" selection-end-line="175" selection-end-column="29" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -79,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
@@ -132,9 +127,9 @@
       <find>shape of middle result is</find>
       <find>has been</find>
       <find>tf.pad</find>
-      <find>Input_tensor</find>
       <find>SAME</find>
       <find>input_x</find>
+      <find>Input_tensor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -716,16 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/99_Doodle/src/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="182" selection-start-line="182" selection-end-line="182" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5418">
@@ -738,16 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -755,6 +730,26 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <marker date="1553069960635" expanded="true" signature="3851:3852" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/99_Doodle/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="182" selection-start-line="182" selection-end-line="182" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="175" column="29" lean-forward="true" selection-start-line="175" selection-start-column="29" selection-end-line="175" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>

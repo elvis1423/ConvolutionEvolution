@@ -173,7 +173,7 @@ with tf.Session(config=config) as sess:
 
     # for i in range(48):
     #     print(anchor[0, i, :, 0])
-    print(anchor[0, :, :, 0])
+    print(anchor)
     # print(positive)
     # print(negative)
     # print('distance between anchor and positive' + str(np.linalg.norm(anchor-positive)))
