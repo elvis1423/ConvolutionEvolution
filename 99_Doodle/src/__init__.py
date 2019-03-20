@@ -1,6 +1,8 @@
 import tensorflow as tf
 import numpy as np
 from numpy import genfromtxt
+import cv2
+import os
 
 
 input_x=np.array([[[[ 1.62434536e+00, -4.47128565e-01, -4.00878192e-01],
@@ -113,9 +115,53 @@ input_x=np.array([[[[ 1.62434536e+00, -4.47128565e-01, -4.00878192e-01],
          [-6.20000844e-01,  8.10951673e-01, -9.55425262e-01],
          [ 6.98032034e-01,  1.04444209e+00,  5.85910431e-01]]]])
 
+WEIGHTS = [
+        'conv1', 'bn1'
+]
+
 conv_shape = {
   'conv1': [64, 3, 7, 7]
 }
+
+
+def load_weights():
+    # Set weights path
+    dirPath = '..'
+    fileNames = filter(lambda f: not f.startswith('.'), os.listdir(dirPath))
+    paths = {}
+    weights_dict = {}
+
+    for n in fileNames:
+        paths[n.replace('.csv', '')] = dirPath + '/' + n
+
+    for name in WEIGHTS:
+        if 'conv' in name:
+            conv_w = genfromtxt(paths[name + '_w'], delimiter=',', dtype=None)
+            conv_w = np.reshape(conv_w, conv_shape[name])
+            conv_w = np.transpose(conv_w, (2, 3, 1, 0))
+            conv_b = genfromtxt(paths[name + '_b'], delimiter=',', dtype=None)
+            weights_dict[name] = [conv_w, conv_b]
+        elif 'bn' in name:
+            bn_w = genfromtxt(paths[name + '_w'], delimiter=',', dtype=None)
+            bn_b = genfromtxt(paths[name + '_b'], delimiter=',', dtype=None)
+            bn_m = genfromtxt(paths[name + '_m'], delimiter=',', dtype=None)
+            bn_v = genfromtxt(paths[name + '_v'], delimiter=',', dtype=None)
+            weights_dict[name] = [bn_w, bn_b, bn_m, bn_v]
+        elif 'dense' in name:
+            dense_w = genfromtxt(dirPath+'/dense_w.csv', delimiter=',', dtype=None)
+            dense_w = np.reshape(dense_w, (128, 736))
+            dense_w = np.transpose(dense_w, (1, 0))
+            dense_b = genfromtxt(dirPath+'/dense_b.csv', delimiter=',', dtype=None)
+            weights_dict[name] = [dense_w, dense_b]
+
+    return weights_dict
+
+def get_camera_face_for_test():
+    test_face = cv2.imread('../camera_0.jpg', 1)
+    (h, w, c) = test_face.shape
+    img1 = np.around(test_face / 255.0, decimals=12)
+    img = img1[..., ::-1]
+    return np.reshape(img, [1, h, w, c])
 
 
 def Conv2D(input=None, filter_shape=None, strides=None, padding='VALID', data_format='NHWC', name=None):
@@ -126,25 +172,23 @@ def Conv2D(input=None, filter_shape=None, strides=None, padding='VALID', data_fo
         conv_b = tf.get_variable(name=name + '_b', shape=[filter_shape[1]], initializer=tf.zeros_initializer())
     conv_generation = tf.nn.conv2d(input=input, filter=conv_w, strides=strides, padding=padding,
                                    data_format=data_format, name=name + '_generation',) + conv_b
-
-    # conv_generation = tf.layers.conv2d(inputs=input, filters=64, kernel_size=[7,7], strides=[2,2],padding='same',name=name)
-    # conv_generation = tf.reverse(tf.reverse(conv_generation, [-2]), [-3])
     return conv_generation
 
 
-def BatchNormalization(input=None, shape=None, name=None, epsilon=0.00001):
-    bn_beta = tf.get_variable(name=name+'_w', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # beta of batch normalization
-    bn_gamma = tf.get_variable(name=name+'_b', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # gamma of batch normalization
+def BatchNormalization(input=None, shape=None, name=None, epsilon=0.001):
+    bn_gamma = tf.get_variable(name=name+'_w', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # beta of batch normalization
+    bn_beta = tf.get_variable(name=name+'_b', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # gamma of batch normalization
     bn_mean = tf.get_variable(name=name+'_m', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # moving mean of batch normalization
     bn_variance = tf.get_variable(name=name+'_v', shape=shape, trainable=False, initializer=tf.zeros_initializer())  # moving variance of batch normalization
     bn = tf.nn.batch_normalization(x=input, variance_epsilon=epsilon, mean=bn_mean, variance=bn_variance,
                                    offset=bn_beta, scale=bn_gamma, name=name)
     return bn
 
-a = tf.constant(-1.0, shape=[4, 3, 3])
-b = tf.contrib.layers.flatten(a)
-c = tf.nn.l2_normalize(b, dim=1)
-d = tf.nn.l2_normalize(b, dim=0)
+
+# a = tf.constant(-1.0, shape=[4, 3, 3])
+# b = tf.contrib.layers.flatten(a)
+# c = tf.nn.l2_normalize(b, dim=1)
+# d = tf.nn.l2_normalize(b, dim=0)
 # b = tf.contrib.layers.fully_connected(inputs=flatten, num_outputs=128, activation_fn=tf.nn.relu)
 
 # w1 = tf.constant(1.0, shape=[3, 3, 1, 1])
@@ -169,19 +213,61 @@ d = tf.nn.l2_normalize(b, dim=0)
 # w1 = np.array([[[[1.0]],[[1.0]],[[1.0]]],[[[1.0]],[[1.0]],[[1.0]]],[[[1.0]],[[1.0]],[[1.0]]]])
 # b1 = np.array([2.0])
 # x = tf.constant(1.0, shape=[1, 10, 10, 3])
-x = np.ones([1, 10, 10, 3])
-x[0,6,6,0] = 73.0
+# x = np.ones([1, 10, 10, 3])
+# x[0,6,6,0] = 73.0
+x = get_camera_face_for_test()
+
 w1 = genfromtxt(fname='..\\conv1_w.csv', delimiter=',', dtype=None) # 7x7x3x64
 w1 = np.reshape(w1, conv_shape['conv1'])
 w1 = np.transpose(w1, (2, 3, 1, 0))
-# w1 = np.flip(np.flip(w1, 0), 1)
-# w1 = np.ones([7,7,3,64])
 b1 = genfromtxt(fname='..\\conv1_b.csv', delimiter=',', dtype=None) # 64
 # b1 = np.zeros([64])
-Input_tensor = tf.placeholder(dtype=tf.float32, shape=[None, 10, 10, 3], name='InputX')
+Input_tensor = tf.placeholder(dtype=tf.float32, shape=[None, 96, 96, 3], name='InputX')
 paddings = tf.constant([[0, 0], [3, 3], [3, 3], [0, 0]])  # important to explicitly zero-padd the tensor before convolution
 Input_padded = tf.pad(Input_tensor, paddings, mode='CONSTANT')
-generation = Conv2D(input=Input_padded, filter_shape=[7, 7, 3, 64], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='conv1')
+conv1_generation = Conv2D(input=Input_padded, filter_shape=[7, 7, 3, 64], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='conv1')
+conv1_bn = BatchNormalization(input=conv1_generation, shape=[64], name='bn1')
+conv1_activation = tf.nn.relu(features=conv1_bn, name='conv1_bn_relu')
+graph = tf.get_default_graph()
+
+weights_dict = load_weights()
+feed_diction = {Input_tensor: x}
+for key, value in weights_dict.items():
+    if 'conv' in key:  # have conv_w and conv_b parameters
+        conv_w = value[0]
+        conv_b = value[1]
+        conv_w_tensor = graph.get_tensor_by_name(key + '_w:0')
+        conv_b_tensor = graph.get_tensor_by_name(key + '_b:0')
+        feed_diction[conv_w_tensor] = conv_w
+        feed_diction[conv_b_tensor] = conv_b
+        print('conv_w shape' + str(conv_w.shape))
+        print('conv_b shape' + str(conv_b.shape))
+    elif 'bn' in key:  # have bn_w, bn_b, bn_m, bn_v parameters
+        bn_w = value[0]
+        bn_b = value[1]
+        bn_m = value[2]
+        bn_v = value[3]
+        bn_w_tensor = graph.get_tensor_by_name(key + '_w:0')
+        bn_b_tensor = graph.get_tensor_by_name(key + '_b:0')
+        bn_m_tensor = graph.get_tensor_by_name(key + '_m:0')
+        bn_v_tensor = graph.get_tensor_by_name(key + '_v:0')
+        # bn_w = np.ones(bn_w.shape)
+        # bn_b = np.zeros(bn_w.shape)
+        # bn_m = np.zeros(bn_w.shape)
+        # bn_v = np.ones(bn_w.shape)
+        feed_diction[bn_w_tensor] = bn_w
+        feed_diction[bn_b_tensor] = bn_b
+        feed_diction[bn_m_tensor] = bn_m
+        feed_diction[bn_v_tensor] = bn_v
+    elif 'dense' in key:  # have dense_w, dense_b parameters
+        fc_w = value[0]
+        fc_b = value[1]
+        fc_w_tensor = graph.get_tensor_by_name('fully_connected/weights:0')
+        fc_b_tensor = graph.get_tensor_by_name('fully_connected/biases:0')
+        feed_diction[fc_w_tensor] = fc_w
+        feed_diction[fc_b_tensor] = fc_b
+
+
 for variable in tf.global_variables():
     print(variable)
 # print(bn_v)
@@ -201,7 +287,6 @@ with tf.Session(config=config) as sess:
     # print(result4)
     print('-------------------------------------------------')
     sess.run(init)
-    graph = tf.get_default_graph()
     # v_tensor = graph.get_tensor_by_name('inception_3a_5x5_bn1_vv:0')
     # feed_dictionary = {v_tensor: bn_v}
     # bn1_w_tensor = graph.get_tensor_by_name('inception_3a_5x5_bn1_w:0')
@@ -222,7 +307,8 @@ with tf.Session(config=config) as sess:
     print('test for conv2d in tensor flow')
     # conv_w_tensor = graph.get_tensor_by_name('conv1/kernel:0')
     # conv_b_tensor = graph.get_tensor_by_name('conv1/bias:0')
-    conv_w_tensor = graph.get_tensor_by_name('conv1_w:0')
-    conv_b_tensor = graph.get_tensor_by_name('conv1_b:0')
-    result = sess.run(generation, feed_dict={Input_tensor: input_x, conv_w_tensor: w1, conv_b_tensor: b1})
+    # conv_w_tensor = graph.get_tensor_by_name('conv1_w:0')
+    # conv_b_tensor = graph.get_tensor_by_name('conv1_b:0')
+    result = sess.run(conv1_activation, feed_dict=feed_diction)
+    print('result shape: ' + str(result.shape))
     print(result[0,:,:,0])
