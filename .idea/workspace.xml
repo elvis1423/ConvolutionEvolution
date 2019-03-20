@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08b9b4b0-1e18-4ade-9e45-7edf26dfd3df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/99_Doodle/src/test_keras.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_FaceNet/src/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/src/data/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/99_Doodle/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/99_Doodle/src/__init__.py" afterDir="false" />
@@ -19,35 +17,36 @@
     <session id="-1165944475">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="2" />
           <entry key="png" value="1" />
-          <entry key="py" value="45" />
+          <entry key="py" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="45" />
+          <entry key="Python" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="9412" />
+          <entry key="py" value="10029" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="9412" />
+          <entry key="Python" value="10029" />
         </counts>
       </usages-collector>
     </session>
@@ -55,19 +54,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01_AlexNet/src/model/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="68" column="87" selection-start-line="68" selection-start-column="87" selection-end-line="68" selection-end-column="87" />
+            <state relative-caret-position="147">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -76,23 +66,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01_AlexNet/src/training/__init__.py">
+        <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+            <state relative-caret-position="5418">
+              <caret line="258" column="29" lean-forward="true" selection-start-line="258" selection-start-column="29" selection-end-line="258" selection-end-column="29" />
+              <folding>
+                <marker date="1553069898953" expanded="true" signature="12774:16276" ph="..." />
+                <marker date="1553069898953" expanded="true" signature="16290:16291" ph="..." />
+                <marker date="1553069898953" expanded="true" signature="16590:16595" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="208" column="20" lean-forward="true" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="20" />
+            <state relative-caret-position="147">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding>
-                <marker date="1552998126625" expanded="true" signature="11861:15181" ph="..." />
-                <marker date="1552998126625" expanded="true" signature="15195:15196" ph="..." />
-                <marker date="1552998126625" expanded="true" signature="15403:15408" ph="..." />
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1553069960635" expanded="true" signature="3851:3852" ph="..." />
               </folding>
             </state>
           </provider>
@@ -101,65 +95,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/99_Doodle/src/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="328">
+              <caret line="182" selection-start-line="182" selection-end-line="182" selection-end-column="62" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/tensorflow/python/ops/array_ops.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="1329" column="4" selection-start-line="1329" selection-start-column="4" selection-end-line="1329" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/99_Doodle/src/test_keras.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="64" selection-start-line="64" selection-end-line="64" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/engine/base_layer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="1056" selection-start-line="1056" selection-end-line="1056" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1939">
-              <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1552998734223" expanded="true" signature="3851:3852" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="56" lean-forward="true" selection-start-line="7" selection-end-line="8" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,6 +130,11 @@
       <find>get_camera_face_for_test</find>
       <find>graph</find>
       <find>shape of middle result is</find>
+      <find>has been</find>
+      <find>tf.pad</find>
+      <find>Input_tensor</find>
+      <find>SAME</find>
+      <find>input_x</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,17 +148,17 @@
         <option value="$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py" />
         <option value="$PROJECT_DIR$/99_Doodle/src/test_keras.py" />
         <option value="$PROJECT_DIR$/99_Doodle/src/__init__.py" />
+        <option value="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" />
         <option value="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" />
         <option value="$PROJECT_DIR$/02_FaceNet/src/data/__init__.py" />
-        <option value="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="3866" />
-    <option name="height" value="2106" />
+    <option name="y" value="2" />
+    <option name="width" value="3862" />
+    <option name="height" value="2090" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -334,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.__init__ (2)">
+  <component name="RunManager" selected="Python.__init__ (3)">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ConvolutionEvolution" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -449,8 +393,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.__init__ (2)" />
         <item itemvalue="Python.__init__ (3)" />
+        <item itemvalue="Python.__init__ (2)" />
         <item itemvalue="Python.test_keras" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.__init__" />
@@ -479,7 +423,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26927254" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32790446" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29967427" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -516,32 +460,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py</url>
-          <line>53</line>
+          <line>162</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py</url>
-          <line>22</line>
+          <line>131</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py</url>
-          <line>13</line>
+          <line>122</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py</url>
-          <line>206</line>
+          <line>224</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py</url>
-          <line>58</line>
+          <line>167</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/99_Doodle/src/__init__.py</url>
-          <line>71</line>
+          <line>187</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
@@ -724,27 +668,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="56" lean-forward="true" selection-start-line="7" selection-end-line="8" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/layers/convolutional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="449" column="28" selection-start-line="449" selection-start-column="17" selection-end-line="449" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/engine/base_layer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="1056" selection-start-line="1056" selection-end-line="1056" />
         </state>
       </provider>
     </entry>
@@ -772,10 +699,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/engine/base_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="1056" selection-start-line="1056" selection-end-line="1056" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="56" lean-forward="true" selection-start-line="7" selection-end-line="8" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/99_Doodle/src/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="328">
+          <caret line="182" selection-start-line="182" selection-end-line="182" selection-end-column="62" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -784,33 +728,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="208" column="20" lean-forward="true" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="20" />
+        <state relative-caret-position="5418">
+          <caret line="258" column="29" lean-forward="true" selection-start-line="258" selection-start-column="29" selection-end-line="258" selection-end-column="29" />
           <folding>
-            <marker date="1552998126625" expanded="true" signature="11861:15181" ph="..." />
-            <marker date="1552998126625" expanded="true" signature="15195:15196" ph="..." />
-            <marker date="1552998126625" expanded="true" signature="15403:15408" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1939">
-          <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1552998734223" expanded="true" signature="3851:3852" ph="..." />
+            <marker date="1553069898953" expanded="true" signature="12774:16276" ph="..." />
+            <marker date="1553069898953" expanded="true" signature="16290:16291" ph="..." />
+            <marker date="1553069898953" expanded="true" signature="16590:16595" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="68" column="87" selection-start-line="68" selection-start-column="87" selection-end-line="68" selection-end-column="87" />
+        <state relative-caret-position="147">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/data/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1553069960635" expanded="true" signature="3851:3852" ph="..." />
           </folding>
         </state>
       </provider>

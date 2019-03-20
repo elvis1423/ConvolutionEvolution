@@ -7,8 +7,10 @@ def Conv2D(input=None, filter_shape=None, strides=None, padding='VALID', data_fo
         conv_b = tf.get_variable(name=name + '_b', shape=[filter_shape[-1]], initializer=tf.zeros_initializer())
     else:
         conv_b = tf.get_variable(name=name + '_b', shape=[filter_shape[1]], initializer=tf.zeros_initializer())
+
     conv_generation = tf.nn.conv2d(input=input, filter=conv_w, strides=strides, padding=padding,
-                                   data_format=data_format, name=name + '_generation',) + conv_b
+                                   data_format=data_format, name=name + '_generation',)  + conv_b
+
     return conv_generation
 
 
@@ -30,14 +32,16 @@ def Inception_block_1a(input=None):
     X_3x3 = Conv2D(input=input, filter_shape=[1, 1, 192, 96], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3a_3x3_conv1')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[96], name='inception_3a_3x3_bn1')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_3a_3x3_relu1')
-    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 128], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='inception_3a_3x3_conv2')
+    X_3x3 = tf.pad(X_3x3, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 128], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3a_3x3_conv2')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[128], name='inception_3a_3x3_bn2')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_3a_3x3_relu2')
 
     X_5x5 = Conv2D(input=input, filter_shape=[1, 1, 192, 16], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3a_5x5_conv1')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[16], name='inception_3a_5x5_bn1')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_3a_5x5_relu1')
-    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 16, 32], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='inception_3a_5x5_conv2')
+    X_5x5 = tf.pad(X_5x5, tf.constant([[0, 0], [2, 2], [2, 2], [0, 0]]), mode='CONSTANT')
+    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 16, 32], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3a_5x5_conv2')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[32], name='inception_3a_5x5_bn2')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_3a_5x5_relu2')
 
@@ -59,14 +63,16 @@ def Inception_block_1b(input=None):
     X_3x3 = Conv2D(input=input, filter_shape=[1, 1, 256, 96], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3b_3x3_conv1')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[96], name='inception_3b_3x3_bn1')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_3b_3x3_relu1')
-    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 128], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='inception_3b_3x3_conv2')
+    X_3x3 = tf.pad(X_3x3, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 128], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3b_3x3_conv2')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[128], name='inception_3b_3x3_bn2')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_3b_3x3_relu2')
 
     X_5x5 = Conv2D(input=input, filter_shape=[1, 1, 256, 32], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3b_5x5_conv1')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[32], name='inception_3b_5x5_bn1')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_3b_5x5_relu1')
-    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 32, 64], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='inception_3b_5x5_conv2')
+    X_5x5 = tf.pad(X_5x5, tf.constant([[0, 0], [2, 2], [2, 2], [0, 0]]), mode='CONSTANT')
+    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 32, 64], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3b_5x5_conv2')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[64], name='inception_3b_5x5_bn2')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_3b_5x5_relu2')
 
@@ -84,14 +90,16 @@ def Inception_block_1c(input=None):
     X_3x3 = Conv2D(input=input, filter_shape=[1, 1, 320, 128], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3c_3x3_conv1')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[128], name='inception_3c_3x3_bn1')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_3c_3x3_relu1')
-    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 128, 256], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='inception_3c_3x3_conv2')
+    X_3x3 = tf.pad(X_3x3, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 128, 256], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='inception_3c_3x3_conv2')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[256], name='inception_3c_3x3_bn2')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_3c_3x3_relu2')
 
     X_5x5 = Conv2D(input=input, filter_shape=[1, 1, 320, 32], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_3c_5x5_conv1')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[32], name='inception_3c_5x5_bn1')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_3c_5x5_relu1')
-    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 32, 64], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='inception_3c_5x5_conv2')
+    X_5x5 = tf.pad(X_5x5, tf.constant([[0, 0], [2, 2], [2, 2], [0, 0]]), mode='CONSTANT')
+    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 32, 64], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='inception_3c_5x5_conv2')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[64], name='inception_3c_5x5_bn2')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_3c_5x5_relu2')
 
@@ -110,14 +118,16 @@ def Inception_block_2a(input=None):
     X_3x3 = Conv2D(input=input, filter_shape=[1, 1, 640, 96], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_4a_3x3_conv1')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[96], name='inception_4a_3x3_bn1')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_4a_3x3_relu1')
-    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 192], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='inception_4a_3x3_conv2')
+    X_3x3 = tf.pad(X_3x3, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 192], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_4a_3x3_conv2')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[192], name='inception_4a_3x3_bn2')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_4a_3x3_relu2')
 
     X_5x5 = Conv2D(input=input, filter_shape=[1, 1, 640, 32], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_4a_5x5_conv1')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[32], name='inception_4a_5x5_bn1')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_4a_5x5_relu1')
-    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 32, 64], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='inception_4a_5x5_conv2')
+    X_5x5 = tf.pad(X_5x5, tf.constant([[0, 0], [2, 2], [2, 2], [0, 0]]), mode='CONSTANT')
+    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 32, 64], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_4a_5x5_conv2')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[64], name='inception_4a_5x5_bn2')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_4a_5x5_relu2')
 
@@ -135,14 +145,16 @@ def Inception_block_2b(input=None):
     X_3x3 = Conv2D(input=input, filter_shape=[1, 1, 640, 160], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_4e_3x3_conv1')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[160], name='inception_4e_3x3_bn1')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_4e_3x3_relu1')
-    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 160, 256], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='inception_4e_3x3_conv2')
+    X_3x3 = tf.pad(X_3x3, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 160, 256], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='inception_4e_3x3_conv2')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[256], name='inception_4e_3x3_bn2')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_4e_3x3_relu2')
 
     X_5x5 = Conv2D(input=input, filter_shape=[1, 1, 640, 64], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_4e_5x5_conv1')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[64], name='inception_4e_5x5_bn1')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_4e_5x5_relu1')
-    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 64, 128], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='inception_4e_5x5_conv2')
+    X_5x5 = tf.pad(X_5x5, tf.constant([[0, 0], [2, 2], [2, 2], [0, 0]]), mode='CONSTANT')
+    X_5x5 = Conv2D(input=X_5x5, filter_shape=[5, 5, 64, 128], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='inception_4e_5x5_conv2')
     X_5x5 = BatchNormalization(input=X_5x5, shape=[128], name='inception_4e_5x5_bn2')
     X_5x5 = tf.nn.relu(features=X_5x5, name='inception_4e_5x5_relu2')
 
@@ -161,7 +173,8 @@ def Inception_block_3a(input=None):
     X_3x3 = Conv2D(input=input, filter_shape=[1, 1, 1024, 96], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_5a_3x3_conv1')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[96], name='inception_5a_3x3_bn1')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_5a_3x3_relu1')
-    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 384], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='inception_5a_3x3_conv2')
+    X_3x3 = tf.pad(X_3x3, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 384], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_5a_3x3_conv2')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[384], name='inception_5a_3x3_bn2')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_5a_3x3_relu2')
 
@@ -183,7 +196,8 @@ def Inception_block_3b(input=None):
     X_3x3 = Conv2D(input=input, filter_shape=[1, 1, 736, 96], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_5b_3x3_conv1')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[96], name='inception_5b_3x3_bn1')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_5b_3x3_relu1')
-    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 384], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='inception_5b_3x3_conv2')
+    X_3x3 = tf.pad(X_3x3, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+    X_3x3 = Conv2D(input=X_3x3, filter_shape=[3, 3, 96, 384], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='inception_5b_3x3_conv2')
     X_3x3 = BatchNormalization(input=X_3x3, shape=[384], name='inception_5b_3x3_bn2')
     X_3x3 = tf.nn.relu(features=X_3x3, name='inception_5b_3x3_relu2')
 
@@ -202,24 +216,31 @@ class FaceNet:
         print('This is the __init__ func of class FaceNet')
         tf.reset_default_graph()
         self.X = tf.placeholder(dtype=tf.float32, shape=[None, 96, 96, 3], name='InputX')
+        # self.X = tf.placeholder(dtype=tf.float32, shape=[None, 10, 10, 3], name='InputX')
 
     def forward(self):
-        conv1_generation = Conv2D(input=self.X, filter_shape=[7, 7, 3, 64], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='conv1')
-        # check point 2
+        # it is important to explicitly zero pad the tensor before convolution
+        paddings = tf.constant([[0, 0], [3, 3], [3, 3], [0, 0]])
+        Input_padded = tf.pad(self.X, paddings, mode='CONSTANT')
+        conv1_generation = Conv2D(input=Input_padded, filter_shape=[7, 7, 3, 64], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='conv1')
+        # check point 2 passed: fixed the padding issue
         conv1_bn = BatchNormalization(input=conv1_generation, shape=[64], name='bn1')
         conv1_activation = tf.nn.relu(features=conv1_bn, name='conv1_bn_relu')
 
-        maxpool_conv1 = tf.nn.max_pool(value=conv1_activation, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='maxpool_conv1')
+        conv1_activation = tf.pad(conv1_activation, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+        maxpool_conv1 = tf.nn.max_pool(value=conv1_activation, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='maxpool_conv1')
 
         conv2_generation = Conv2D(input=maxpool_conv1, filter_shape=[1, 1, 64, 64], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='conv2')
         conv2_bn = BatchNormalization(input=conv2_generation, shape=[64], name='bn2')
         conv2_activation = tf.nn.relu(features=conv2_bn, name='conv2_bn_relu')
 
-        conv3_generation = Conv2D(input=conv2_activation, filter_shape=[3, 3, 64, 192], strides=[1, 1, 1, 1], padding='SAME', data_format='NHWC', name='conv3')
+        conv2_activation = tf.pad(conv2_activation, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+        conv3_generation = Conv2D(input=conv2_activation, filter_shape=[3, 3, 64, 192], strides=[1, 1, 1, 1], padding='VALID', data_format='NHWC', name='conv3')
         conv3_bn = BatchNormalization(input=conv3_generation, shape=[192], name='bn3')
         conv3_activation = tf.nn.relu(features=conv3_bn, name='conv3_bn_relu')
 
-        maxpool_conv3 = tf.nn.max_pool(value=conv3_activation, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding='SAME', data_format='NHWC', name='maxpool_conv3')
+        conv3_activation = tf.pad(conv3_activation, tf.constant([[0, 0], [1, 1], [1, 1], [0, 0]]), mode='CONSTANT')
+        maxpool_conv3 = tf.nn.max_pool(value=conv3_activation, ksize=[1, 3, 3, 1], strides=[1, 2, 2, 1], padding='VALID', data_format='NHWC', name='maxpool_conv3')
         # check point 1 not equal with expect
         inception_1a = Inception_block_1a(maxpool_conv3)
         inception_1b = Inception_block_1b(inception_1a)
@@ -236,3 +257,4 @@ class FaceNet:
         fully_connected = tf.contrib.layers.fully_connected(inputs=flattened, num_outputs=128, activation_fn=None)
         face_embedding = tf.nn.l2_normalize(x=fully_connected, axis=-1, name='l2_normal')
         return face_embedding
+        # return conv1_generation
