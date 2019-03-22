@@ -19,6 +19,8 @@ init = tf.global_variables_initializer()
 config = tf.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.2
 saver = tf.train.Saver()
+for variable in tf.global_variables():
+    print(variable)
 with tf.Session(config=config) as sess:
     sess.run(init)
     # assign_op = var1.assign(b1)

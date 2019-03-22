@@ -20,6 +20,7 @@ for variable in tf.global_variables():
 graph = tf.get_default_graph()
 InputX = graph.get_tensor_by_name('InputX:0')
 feed_diction = {InputX: input_x}
+variable_diction = {}
 for key, value in weights_dict.items():
     if 'conv' in key:  # have conv_w and conv_b parameters
         conv_w = value[0]
@@ -28,6 +29,10 @@ for key, value in weights_dict.items():
         conv_b_tensor = graph.get_tensor_by_name(key + '_b:0')
         feed_diction[conv_w_tensor] = conv_w
         feed_diction[conv_b_tensor] = conv_b
+        var_w = [v for v in tf.global_variables() if v.name == key + '_w:0'][0]
+        var_b = [v for v in tf.global_variables() if v.name == key + '_b:0'][0]
+        variable_diction[var_w] = conv_w
+        variable_diction[var_b] = conv_b
     elif 'bn' in key:  # have bn_w, bn_b, bn_m, bn_v parameters
         bn_w = value[0]
         bn_b = value[1]
@@ -41,6 +46,14 @@ for key, value in weights_dict.items():
         feed_diction[bn_b_tensor] = bn_b
         feed_diction[bn_m_tensor] = bn_m
         feed_diction[bn_v_tensor] = bn_v
+        var_bn_w = [v for v in tf.global_variables() if v.name == key + '_w:0'][0]
+        var_bn_b = [v for v in tf.global_variables() if v.name == key + '_b:0'][0]
+        var_bn_m = [v for v in tf.global_variables() if v.name == key + '_m:0'][0]
+        var_bn_v = [v for v in tf.global_variables() if v.name == key + '_v:0'][0]
+        variable_diction[var_bn_w] = bn_w
+        variable_diction[var_bn_b] = bn_b
+        variable_diction[var_bn_m] = bn_m
+        variable_diction[var_bn_v] = bn_v
     elif 'dense' in key:  # have dense_w, dense_b parameters
         fc_w = value[0]
         fc_b = value[1]
@@ -48,6 +61,10 @@ for key, value in weights_dict.items():
         fc_b_tensor = graph.get_tensor_by_name('fully_connected/biases:0')
         feed_diction[fc_w_tensor] = fc_w
         feed_diction[fc_b_tensor] = fc_b
+        var_fc_w = [v for v in tf.global_variables() if v.name == 'fully_connected/weights:0'][0]
+        var_fc_b = [v for v in tf.global_variables() if v.name == 'fully_connected/biases:0'][0]
+        variable_diction[var_fc_w] = fc_w
+        variable_diction[var_fc_b] = fc_b
 
 init = tf.global_variables_initializer()
 config = tf.ConfigProto()
@@ -61,7 +78,7 @@ with tf.Session(config=config) as sess:
     feed_diction[InputX] = benoit
     negative = sess.run(face_vector, feed_dict=feed_diction)
 
-    for tensor, param in feed_diction.items():
+    for tensor, param in variable_diction.items():
         assign_op = tensor.assign(param)
         sess.run(assign_op)
 
