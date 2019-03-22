@@ -166,9 +166,9 @@ config.gpu_options.per_process_gpu_memory_fraction = 0.2
 with tf.Session(config=config) as sess:
     sess.run(init)
     anchor = sess.run(face_vector, feed_dict=feed_diction)
-    # feed_diction[InputX] = younes
+    feed_diction[InputX] = younes
     positive = sess.run(face_vector, feed_dict=feed_diction)
-    # feed_diction[InputX] = benoit
+    feed_diction[InputX] = benoit
     negative = sess.run(face_vector, feed_dict=feed_diction)
 
     # for i in range(48):
