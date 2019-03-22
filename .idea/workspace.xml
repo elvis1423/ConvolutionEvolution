@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08b9b4b0-1e18-4ade-9e45-7edf26dfd3df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/02_FaceNet/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02_FaceNet/src/inference/frommodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,36 +26,50 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="2" />
+          <entry key="md" value="1" />
           <entry key="png" value="1" />
-          <entry key="py" value="51" />
+          <entry key="py" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="51" />
+          <entry key="Python" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="10595" />
+          <entry key="py" value="10756" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="10595" />
+          <entry key="Python" value="10756" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+            <state relative-caret-position="307">
+              <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/frommodel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -64,10 +78,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="29" column="48" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01_AlexNet/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="294">
+                <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01_AlexNet/src/model/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-638">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_AlexNet/src/training/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="59" />
+            <state relative-caret-position="103">
+              <caret line="15" column="64" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="64" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -78,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="506">
+              <caret line="262" column="87" selection-start-line="262" selection-start-column="78" selection-end-line="262" selection-end-column="87" />
               <folding>
                 <marker date="1553084822631" expanded="true" signature="12801:16303" ph="..." />
                 <marker date="1553084822631" expanded="true" signature="16317:16318" ph="..." />
@@ -125,7 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>prediction</find>
       <find>tf.contrib.layers.xavier_initializer(seed=0)</find>
       <find>shape</find>
       <find>inception_3b_1x1_bn</find>
@@ -146,6 +192,7 @@
       <find>get_camera_face_for_test</find>
       <find>conv1_bn</find>
       <find>Inception_block_1a</find>
+      <find>prediction</find>
       <find>input_x</find>
     </findStrings>
   </component>
@@ -163,6 +210,7 @@
         <option value="$PROJECT_DIR$/02_FaceNet/src/model/__init__.py" />
         <option value="$PROJECT_DIR$/02_FaceNet/src/data/__init__.py" />
         <option value="$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py" />
+        <option value="$PROJECT_DIR$/02_FaceNet/src/inference/frommodel.py" />
       </list>
     </option>
   </component>
@@ -186,6 +234,38 @@
             <path>
               <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
               <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="inference" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConvolutionEvolution" type="462c0819:PsiDirectoryNode" />
+              <item name="01_AlexNet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ConvolutionEvolution" type="b2602c69:ProjectViewProjectNode" />
@@ -661,23 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="56" lean-forward="true" selection-start-line="7" selection-end-line="8" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/model/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/99_Doodle/src/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1579">
@@ -699,10 +762,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/model/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-638">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="294">
+            <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/training/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/02_FaceNet/src/model/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="506">
+          <caret line="262" column="87" selection-start-line="262" selection-start-column="78" selection-end-line="262" selection-end-column="87" />
           <folding>
             <marker date="1553084822631" expanded="true" signature="12801:16303" ph="..." />
             <marker date="1553084822631" expanded="true" signature="16317:16318" ph="..." />
@@ -711,20 +801,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/training/__init__.py">
+    <entry file="file://$PROJECT_DIR$/01_AlexNet/src/inference/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="59" />
+        <state relative-caret-position="527">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="48" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+        <state relative-caret-position="307">
+          <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_FaceNet/src/inference/frommodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
