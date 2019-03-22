@@ -14,7 +14,18 @@ Please look at the figure 1 to have a glance at FaceNet.
 
 From figure 1 we can see, the layers before Inception are inspired by AlexNet: large sized filters interleaving with Max pools.
 
+## Feed params
+
 After defined the FaceNet forward process, I need to construct a dictionary to feed the trained parameters to model. That dictionary's key is tf.Variable from tf.get_default_graph, and value is trained parameters in .csv files. We can retrieve key by using graph.get_tensor_by_name, however, the fully connected layer hasn't a name attribute. To work around that, I printed all tf.global_variables to find what name is fully connected layer. As shown in below, fully connected layer parameters are with names: 'fully_connected/weights:0' and 'fully_connected/biases:0'.
+
+print all tf.global_variables to find the variable name:
+
+```python
+for variable in tf.global_variables():
+    print(variable)
+```
+
+result:
 
 ```python
 <tf.Variable 'conv1_w:0' shape=(7, 7, 3, 64) dtype=float32_ref>
@@ -242,4 +253,14 @@ After defined the FaceNet forward process, I need to construct a dictionary to f
 <tf.Variable 'fully_connected/weights:0' shape=(736, 128) dtype=float32_ref>
 <tf.Variable 'fully_connected/biases:0' shape=(128,) dtype=float32_ref>
 ```
+
+## Debug
+
+1. tf.nn.conv2d(padding='SAME', ...) does **not** necessarily pad zeros symmetrically, which lead to the inconsistence between tensorflow impl. and orignal keras impl. To solve this problem, use tf.pad explicitly to pad the convolution inputs.
+
+2. For trained network, batchnormalization layer has 4 kinds of params: gamma, beta, mean, variance. They are used to normalize the convolution result on the channel dimension per batch. The sequence of those params are: 
+
+   ```python
+   tf.nn.batch_normalization(x=input, variance_epsilon=epsilon, mean=bn_mean, variance=bn_variance, offset=bn_beta, scale=bn_gamma, name=name)
+   ```
 
