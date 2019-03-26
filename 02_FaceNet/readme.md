@@ -264,3 +264,27 @@ result:
    tf.nn.batch_normalization(x=input, variance_epsilon=epsilon, mean=bn_mean, variance=bn_variance, offset=bn_beta, scale=bn_gamma, name=name)
    ```
 
+## Save model
+
+After correctly inferencing the face vector in tensorflow, a question comes out: Can we save the model so that restore the model to inference rather than load the parameters from csv.
+
+The answer is yes, and consuming time is reduced largely. The code corresponding to that is src/inference/\_\_init\_\_.py
+
+Since the variables in the compute graph are loaded from csv. files not trained, we must save these variables explicitly using sess.run
+
+```python
+saver = tf.train.Saver()
+var_fc_w = [v for v in tf.global_variables() if v.name == 'fully_connected/weights:0'][0]
+param_fc_w = loadfromcsv(path)
+...
+sess.run(var_fc_w.assign(param_fc_w))
+...
+saver.save(sess, '../../model/face_encoding.ckpt')
+```
+
+Then the whole compute graph can be saved in model files, which can be restored in later inference tasks.
+
+## Server model
+
+The next step is to turn the saved model into server model to facilitate the on-line use.
+

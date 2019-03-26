@@ -78,8 +78,8 @@ with tf.Session(config=config) as sess:
     feed_diction[InputX] = benoit
     negative = sess.run(face_vector, feed_dict=feed_diction)
 
-    for tensor, param in variable_diction.items():
-        assign_op = tensor.assign(param)
+    for variable_key, param_value in variable_diction.items():
+        assign_op = variable_key.assign(param_value)
         sess.run(assign_op)
 
     saver.save(sess, '../../model/face_encoding.ckpt')
