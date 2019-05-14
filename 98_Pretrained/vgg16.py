@@ -66,8 +66,8 @@ cbs.append(tracker_lr)
 
 model_final.compile(loss="mean_squared_error", optimizer=optimizers.SGD(lr=0.0001, momentum=0.9), metrics=['mae', 'acc'])
 model_final.fit(x=x_train, y=y_train, validation_split=0.3, epochs=1, batch_size=1, callbacks=cbs)
-test_predict = model.predict(x_test)
-train_predict = model.predict(x_train)
+test_predict = model_final.predict(x_test)
+train_predict = model_final.predict(x_train)
 print("test predict: " + str(test_predict))
 print("train predict: " + str(train_predict))
 
